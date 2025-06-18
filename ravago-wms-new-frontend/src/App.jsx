@@ -5,7 +5,7 @@ function App() {
   const [message, setMessage] = useState('Loading...');
 
   useEffect(() => {
-    axios.get('https://ravago-wms-backend.onrender.com/api/test')
+    axios.get('http://localhost:3001/api/test')
       .then(res => setMessage(res.data.message))
       .catch(() => setMessage('❌ Failed to connect to backend'));
   }, []);
